@@ -184,15 +184,15 @@
         this.currentLimit = limit;
         this.getPaginate();
       },
-      inputHandler(){       
+      inputHandler(e){  
+        const {name,value} = e?.target
+        this.user = {[name]:value,...this.user} 
       }
     },
     mounted() {
       this.getAllUsers();
       this.getPaginate();
-      this.inputHandler()
-        const {name,value} = e.target
-        this.user = {[name]:value,...user} 
+      this.inputHandler();
     },
   };
 </script>
