@@ -186,10 +186,7 @@
       },
       inputHandler(e){
         const {name,value} = e.target
-        user = {[name]:value,...user}
-        console.log(user)
-        this.user = user
-        
+        this.user = {[name]:value,...user}        
       }
     },
     created(){
